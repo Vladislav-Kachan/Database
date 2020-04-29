@@ -1,0 +1,57 @@
+﻿<Page x:Class="WpfApp1.Card"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="620" d:DesignWidth="774"
+      Title="Card">
+
+    <Grid>
+
+        <Grid Height="220" VerticalAlignment="Top">
+            <TextBlock x:Name="WhoAdd" Text="Качан Владислав:" FontSize="30" Margin="20 10 0 0"/>
+            <StackPanel Margin="20,53,0,0">
+                <TextBlock Margin="0 20 0 0" x:Name="numberTrunsaction" Text="Номер заказа: " FontSize="30"/>
+
+            </StackPanel>
+            <StackPanel Margin="0,115,0,0" Orientation="Horizontal">
+                <TextBlock Text="Сумма: " FontSize="30" Margin="20 15 0 0"/>
+                <Grid>
+                    <TextBox x:Name="MoneyPay" FontSize="30" HorizontalAlignment="Left" Width="174" Height="42" Margin="10,10,0,53"></TextBox>
+                </Grid>
+                <TextBlock Text="$" FontSize="30" Margin="20 15 0 0"/>
+            </StackPanel>
+
+        </Grid>
+
+
+        <Grid Height="400" VerticalAlignment="Bottom">
+            <StackPanel>
+                <Grid>
+                    <Rectangle RadiusX="20" RadiusY="20" Width="338" Height="192" Fill="#FFA09F9F" Margin="246,56,190,-56"/>
+                    <Rectangle RadiusX="20" RadiusY="20" Width="338" Height="192" Fill="LightGray" Margin="136,0,300,0"/>
+                    <TextBox x:Name="numberCard" Text="Номер карты" Height="30" Margin="151,74,319,74" FontSize="15" BorderBrush="#89E4C01C" Background="White" MouseDown="Field_ImputNumber"/>
+                    <Button Content="Пополнить" Width="150" Margin="574,332,50,-172" Click="Button_AddMoney"/>
+                    <Button Content="Вернуться" Width="150" Margin="50,332,573,-172" Click="Button_Back"/>
+                    <TextBlock Text="VALID THRU" FontSize="10" Margin="151,123,568,53"/>
+                    <TextBox TextAlignment="Center" Text="MM" Width="40" Height="30" Margin="151,144,583,18" BorderBrush="#89E4C01C" Background="White"/>
+                    <TextBox TextAlignment="Center" Text="ГГ" Width="40" Height="30" Margin="215,144,519,18" BorderBrush="#89E4C01C" Background="White"/>
+                    <TextBlock Text="/" FontSize="25" Margin="197,146,564,25"/>
+                    <Image Margin="388,27,319,141" Source="Assets/mastercard-icon-png-5a3556c6e81b34.5328243515134450629507.jpg"/>
+                    <Image Margin="303,27,404,141" Source="Assets/kisspng-visa-mastercard-credit-card-bank-business-italy-visa-5b2392c0f22411.9820124515290579849918.jpg"/>
+                    <Rectangle Fill="Black" Margin="474,88,190,76" />
+                    <TextBox TextAlignment="Center" Text="СVС" Height="30" Margin="499,144,215,33" BorderBrush="#89E4C01C" Background="White"/>
+                    <TextBlock Text="Тир цифры" FontSize="10" Margin="499,179,220,16"/>
+                    <TextBlock Text="с обратной" FontSize="10" Margin="499,191,220,5"/>
+                    <TextBlock Text="стороны карты" FontSize="10" Margin="499,204,204,-11"/>
+
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+
+
+    </Grid>
+</Page>

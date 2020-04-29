@@ -1,0 +1,51 @@
+﻿<Page x:Class="WpfApp1.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="620" d:DesignWidth="774"
+      Title="Home">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Right" Width="400">
+            <Ellipse Width="200" Height="200" Margin="30">
+                <Ellipse.Fill>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/pexels-photo-247885.jpeg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock HorizontalAlignment="Center" Text="Баланс:" FontSize="40"/>
+            <TextBlock x:Name="Balance" HorizontalAlignment="Center" Text="0$" FontSize="40" Margin="70"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Width="455">
+            <Grid Height="100" Margin="40 70 0 0">
+                <TextBlock  Text="Имя: " FontSize="30" Margin="-1,6,0,-5"/>
+                <DockPanel x:Name="FieldName" IsEnabled="False">
+                    <TextBox x:Name="name" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Владислав" Width="309" FontSize="30" Height="49"/>
+                </DockPanel>
+            </Grid>
+            <Grid Height="100" Margin="40 10 0 0">
+                <TextBlock  Text="Фамилия: " FontSize="30" Margin="-1,6,0,-5"/>
+                <DockPanel x:Name="FieldSecondName" IsEnabled="False">
+                    <TextBox x:Name="secondName" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Качан" Width="309" FontSize="30" Height="49"/>
+                </DockPanel>
+            </Grid>
+            <Grid Height="100" Margin="40 10 0 0">
+                <TextBlock  Text="Телефон: " FontSize="30" Margin="-1,6,0,-5"/>
+                <DockPanel x:Name="FieldPhone" IsEnabled="False">
+                    <TextBox VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="+375336617833" Width="309" FontSize="30" Height="49"/>
+                </DockPanel>
+            </Grid>
+            <Grid Height="100" Margin="40 10 0 0">
+                <TextBlock  Text="Почта: " FontSize="30" Margin="-1,6,0,-5"/>
+                <DockPanel x:Name="FieldMail" IsEnabled="False">
+                    <TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Text="Kachan872@mail.ru" Width="309" FontSize="30" Height="49"/>
+                </DockPanel>
+            </Grid>
+            
+        </StackPanel>
+        <Button Content="Пополнить" Margin="504,558,130,30" Click="Buuton_AddMoney"/>
+        <Button x:Name="Change" Content="Редактировать" Margin="73,558,561,30" Click="Button_Change" Cursor="Hand"/>
+    </Grid>
+</Page>

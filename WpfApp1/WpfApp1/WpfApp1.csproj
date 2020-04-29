@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="back.jpg" />
+    <None Remove="de477ab2eaba63ede4d733671e2cb2a6.jpg" />
+    <None Remove="mastercard-icon-png-5a3556c6e81b34.5328243515134450629507.jpg" />
+    <None Remove="pexels-photo-247885.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="back.jpg" />
+    <Resource Include="de477ab2eaba63ede4d733671e2cb2a6.jpg" />
+    <Resource Include="mastercard-icon-png-5a3556c6e81b34.5328243515134450629507.jpg" />
+    <Resource Include="pexels-photo-247885.jpeg" />
+  </ItemGroup>
+
+</Project>
